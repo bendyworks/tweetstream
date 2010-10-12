@@ -53,7 +53,7 @@ describe TweetStream::Client do
 
   describe '#start' do
     before do
-      @stream = stub("Twitter::JSONStream", 
+      @stream = stub("TwitterStream::JSONStream", 
         :connect => true,
         :unbind => true, 
         :each_item => true, 
@@ -62,12 +62,12 @@ describe TweetStream::Client do
         :connection_completed => true
       )
       EM.stub!(:run).and_yield
-      Twitter::JSONStream.stub!(:connect).and_return(@stream)
+      TwitterStream::JSONStream.stub!(:connect).and_return(@stream)
       @client = TweetStream::Client.new('abc','def')
     end
     
     it 'should try to connect via a JSON stream' do
-      Twitter::JSONStream.should_receive(:connect).with(
+      TwitterStream::JSONStream.should_receive(:connect).with(
         :auth => 'abc:def',
         :content => 'track=monday',
         :path => URI.parse('/1/statuses/filter.json'),

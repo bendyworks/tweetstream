@@ -216,7 +216,7 @@ module TweetStream
       }
       
       EventMachine::run {
-        @stream = Twitter::JSONStream.connect(
+        @stream = TwitterStream::JSONStream.connect(
           :path => uri,
           :host => host,
           :oauth => oauth,
