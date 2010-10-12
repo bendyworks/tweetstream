@@ -1,4 +1,6 @@
 *.sw?
+*.swp
+*.orig
 .DS_Store
 coverage
 rdoc
