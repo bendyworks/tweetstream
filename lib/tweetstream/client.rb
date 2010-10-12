@@ -1,7 +1,7 @@
 require 'uri'
 require 'cgi'
 require 'eventmachine'
-require 'twitter/json_stream'
+require 'twitter_stream/json_stream'
 require 'json'
 
 module TweetStream
