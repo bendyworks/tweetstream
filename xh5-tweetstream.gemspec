@@ -4,14 +4,14 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{tweetstream}
-  s.version = "1.0.4"
+  s.name = %q{xh5-tweetstream}
+  s.version = "1.1.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Michael Bleigh"]
-  s.date = %q{2010-02-11}
+  s.date = %q{2010-10-12}
   s.description = %q{TweetStream allows you to easily consume the Twitter Streaming API utilizing the YAJL Ruby gem.}
-  s.email = %q{michael@intridea.com}
+  s.email = %q{eric@xhfive.com}
   s.extra_rdoc_files = [
     "LICENSE",
      "README.rdoc"
@@ -42,10 +42,10 @@ Gem::Specification.new do |s|
      "spec/tweetstream/status_spec.rb",
      "spec/tweetstream_spec.rb"
   ]
-  s.homepage = %q{http://github.com/intridea/tweetstream}
+  s.homepage = %q{http://github.com/erichurst/tweetstream}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.3.5}
+  s.rubygems_version = %q{1.3.6}
   s.summary = %q{TweetStream is a simple wrapper for consuming the Twitter Streaming API.}
   s.test_files = [
     "spec/spec_helper.rb",
@@ -63,16 +63,16 @@ Gem::Specification.new do |s|
 
     if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
       s.add_development_dependency(%q<rspec>, [">= 0"])
-      s.add_runtime_dependency(%q<twitter-stream>, [">= 0"])
+      s.add_runtime_dependency(%q<xh5-twitter-stream>, [">= 0"])
       s.add_runtime_dependency(%q<daemons>, [">= 0"])
     else
       s.add_dependency(%q<rspec>, [">= 0"])
-      s.add_dependency(%q<twitter-stream>, [">= 0"])
+      s.add_dependency(%q<xh5-twitter-stream>, [">= 0"])
       s.add_dependency(%q<daemons>, [">= 0"])
     end
   else
     s.add_dependency(%q<rspec>, [">= 0"])
-    s.add_dependency(%q<twitter-stream>, [">= 0"])
+    s.add_dependency(%q<xh5-twitter-stream>, [">= 0"])
     s.add_dependency(%q<daemons>, [">= 0"])
   end
 end

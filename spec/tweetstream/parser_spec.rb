@@ -2,13 +2,13 @@ require File.dirname(__FILE__) + '/../spec_helper'
 
 describe 'TweetStream JSON Parsers' do
   it 'should default to the JSON Gem' do
-    TweetStream::Client.new('test','fake').parser.should == TweetStream::Parsers::JsonGem
+    TweetStream::Client.new('abc','def','hij','klm').parser.should == TweetStream::Parsers::JsonGem
   end
   
   [:json_gem, :yajl, :active_support, :json_pure].each do |engine|
     describe "#{engine} parsing" do
       before do
-        @client = TweetStream::Client.new('test','fake',engine)
+        @client = TweetStream::Client.new('abc','def','hij','klm',engine)
         @class_name = "TweetStream::Parsers::#{engine.to_s.split('_').map{|s| s.capitalize}.join('')}"
       end
       
@@ -32,7 +32,7 @@ describe 'TweetStream JSON Parsers' do
   end
   
   it 'should be settable to a class' do
-    @client = TweetStream::Client.new('abc','def')
+    @client = TweetStream::Client.new('abc','def','hij','klm')
     @client.parser = FakeParser
     @client.parser.should == FakeParser
   end
