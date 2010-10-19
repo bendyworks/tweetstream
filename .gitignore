@@ -1,5 +1,6 @@
 *.sw?
 *.swp
+*.gem
 *.orig
 .DS_Store
 coverage
