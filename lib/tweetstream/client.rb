@@ -226,7 +226,7 @@ module TweetStream
           :site_streams => query_parameters[:site_streams],
           :method => method.to_s.upcase,
           :content => (method == :post ? build_post_body(query_parameters) : ''),
-          :user_agent => 'TweetStream'
+          :user_agent => 'SocialVolt STUDIO'
         )
         
         @stream.each_item do |item|
